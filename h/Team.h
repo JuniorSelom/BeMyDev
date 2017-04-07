@@ -17,11 +17,13 @@ using namespace std;
 class Team {
 public:
     Team(const std::string &nom);
+    void Add(User &user);
+    void CalculCoefficien();
 
 public:
     string nom;
     vector<User> members;
-    double coefficient;
+    float coefficient;
 
     int note[];
 
