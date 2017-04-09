@@ -12,7 +12,9 @@ public:
     int dureeMax;
     int ordre;
 
+    virtual ~Etape();
 
+    Etape(int dureeMax, int ordre);
 };
 
 

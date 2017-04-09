@@ -22,10 +22,11 @@ public:
     string nom;
     vector<User> members;
     double coefficient;
+    int nbMembers;
 
-    int note[];
+    int notes[];
 
-
+    void addMember(const User u);
 };
 
 

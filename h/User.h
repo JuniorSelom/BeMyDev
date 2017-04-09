@@ -18,6 +18,7 @@ public:
     std::string nom;
     std::string prenom;
 
+    //virtual ~User();
 
 };
 

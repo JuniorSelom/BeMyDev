@@ -5,3 +5,8 @@
 #include "h/Etape.h"
 
 
+Etape::~Etape() {
+
+}
+
+Etape::Etape(int dureeMax, int ordre) : dureeMax(dureeMax), ordre(ordre) {}
