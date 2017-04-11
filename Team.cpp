@@ -17,7 +17,7 @@ void Team::addMember(const User u) {
     coef = ((nbMembers - 5) * 0.05) + 1;
 }
 
-float Team::addNote(int note) {
+float Team::addNote(float note) {
     theNotes.push_back(note);
 }
 
