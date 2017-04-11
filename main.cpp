@@ -29,6 +29,8 @@ int main() {
     t1.addMember(u1);
     t1.addMember(u2);
 
+    t1.addNote(12);
+    t1.addNote(13);
 
 
     Team t2("Team 2");
@@ -73,13 +75,15 @@ int main() {
     cout << "nb member in team 1: " << hackathon.teams[0].nbMembers << endl;
 
     std::cout << "nb t1: " << t1.nbMembers << std::endl;
-    std::cout << "coef t1: " << t1.coef <<endl;
+    std::cout << "coef t1: " << t1.coef << std::endl;
 
     std::cout << "nb t2: " << t2.nbMembers << std::endl;
-    std::cout << "coef t2: " << t2.coef <<endl;
+    std::cout << "coef t2: " << t2.coef << std::endl;
 
     std::cout << "nb t3: " << t3.nbMembers << std::endl;
-    std::cout << "coef t3: " << t3.coef <<endl;
+    std::cout << "coef t3: " << t3.coef << std::endl;
+
+    std::cout << "moyenne t1: " << t1.getMoyenne() << std::endl;
 
 
     return 0;

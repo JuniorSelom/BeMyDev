@@ -25,9 +25,13 @@ public:
     int nbMembers;
     float coef;
 
-    int notes[];
+    // int notes[];
+    vector<int> theNotes;
 
     void addMember(const User u);
+
+    float addNote(int note);
+    float getMoyenne();
 };
 
 
