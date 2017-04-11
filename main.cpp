@@ -20,8 +20,9 @@ int main() {
     cin >> i;
 
     cout << i << endl;
-
-    Hackathon hackathon;
+    vector<Hackathon> h;
+    Hackathon hackathon("toto");
+    h.push_back(hackathon);
 
     // Création des étapes
     Etape e1(1, 3);
@@ -34,7 +35,7 @@ int main() {
     hackathon.etapes.push_back(e3);
 
     // Création des teams
-    Team t1("Team 1");
+    Team t1("Team 1", 1);
     User u1("JUL", "Variété");
     User u2("PNL", "Variété");
     // Ajout des membres à la team
@@ -45,7 +46,7 @@ int main() {
     t1.addNote(13);
 
 
-    Team t2("Team 2");
+    Team t2("Team 2", 2);
     User u3("Lacraps", "RAP");
     User u4("Davodka", "RAP");
     User u5("GYS", "RAP");
@@ -63,7 +64,7 @@ int main() {
     t2.addMember(u6);
     t2.addMember(u7);
 
-    Team t3("Team 3");
+    Team t3("Team 3", 3);
     User u8("bbo", "tt");
     User u9("bfokbo", "tt");
     User u10("bpokbo", "tt");
@@ -98,5 +99,10 @@ int main() {
     std::cout << "moyenne t1: " << t1.getMoyenne() << std::endl;
 
     Display::tata();
+
+    std::cout << "nb teams before: " << h.size() << std::endl;
+    Display::displayAddEquipe(h);
+    std::cout << "nb teams after: " << h.size() << std::endl;
+
     return 0;
 }
