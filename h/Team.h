@@ -16,7 +16,7 @@ using namespace std;
 
 class Team {
 public:
-    Team(const std::string &nom);
+    Team(const std::string &nom_,int uid_ );
 
 public:
     string nom;

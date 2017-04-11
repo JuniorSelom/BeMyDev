@@ -19,18 +19,18 @@ class Hackathon {
 public:
 
 
-    Hackathon(const string &nom);
+    Hackathon(const string &name);
 
     virtual ~Hackathon();
 
 public:
-    string nom;
+    string name;
     vector<Team> teams;
     vector<Etape> etapes;
     Resultat resultat;
 
-    void addTeam(const Team t);
-    void addEtape(const Etape e);
+    void addTeam(string name );
+    void addEtape(int dureeMax, int ordre );
 
 };
 

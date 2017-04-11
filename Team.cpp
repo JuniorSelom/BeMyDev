@@ -5,10 +5,11 @@
 #include "h/Team.h"
 
 
-Team::Team(const std::string &nom_) {
+Team::Team(const std::string &nom_, int uid_) {
     nom = nom_;
     nbMembers = 0;
     coef = 0;
+    uid = uid_;
 }
 
 void Team::addMember(const User u) {
