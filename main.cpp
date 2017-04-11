@@ -9,6 +9,17 @@ using namespace std;
 
 int main() {
 
+    int i;
+    cout << "Selectionnez une action" << endl;
+    cout << "1\tAjouter un Hackathon" << endl;
+    cout << "2\tAjouter une étape" << endl;
+    cout << "3\tAjouter une équipe" << endl;
+    cout << "4\tRentrer les notes" << endl;
+    cout << endl << endl << "0\tQuitter" << endl;
+    cin >> i;
+
+    cout << i << endl;
+
     Hackathon hackathon;
 
     // Création des étapes
