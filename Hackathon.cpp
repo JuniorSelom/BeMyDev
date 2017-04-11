@@ -10,4 +10,19 @@
 
 Hackathon::~Hackathon() {
 
+
+
+}
+
+Hackathon::Hackathon(const string &nom_)  {
+    nom = nom_;
+}
+
+
+void Hackathon::addTeam(const Team t) {
+
+}
+
+void Hackathon::addEtape(const Etape e) {
+
 }

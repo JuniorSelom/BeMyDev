@@ -24,6 +24,7 @@ public:
     double coefficient;
     int nbMembers;
     float coef;
+    int uid;
 
     // int notes[];
     vector<float> theNotes;
