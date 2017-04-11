@@ -23,6 +23,7 @@ public:
     vector<User> members;
     double coefficient;
     int nbMembers;
+    float coef;
 
     int notes[];
 

@@ -29,21 +29,57 @@ int main() {
     t1.addMember(u1);
     t1.addMember(u2);
 
+
+
     Team t2("Team 2");
     User u3("Lacraps", "RAP");
     User u4("Davodka", "RAP");
     User u5("GYS", "RAP");
+    User u6("Tot", "RAP");
+    User u7("Tat", "RAP");
 
+    //t2.members didnt work
     t2.members.push_back(u3);
     t2.members.push_back(u4);
     t2.members.push_back(u5);
 
+    t2.addMember(u3);
+    t2.addMember(u4);
+    t2.addMember(u5);
+    t2.addMember(u6);
+    t2.addMember(u7);
+
+    Team t3("Team 3");
+    User u8("bbo", "tt");
+    User u9("bfokbo", "tt");
+    User u10("bpokbo", "tt");
+    User u11("qwd", "tt");
+    User u12("ca", "tt");
+    User u13("gerv", "tt");
+    User u14("csdr", "tt");
+    t3.addMember(u8);
+    t3.addMember(u9);
+    t3.addMember(u10);
+    t3.addMember(u11);
+    t3.addMember(u12);
+    t3.addMember(u13);
+    t3.addMember(u14);
+
     // Ajout des teams au hackathon
     hackathon.teams.push_back(t1);
     hackathon.teams.push_back(t2);
+    hackathon.teams.push_back(t3);
 
-    cout << hackathon.teams[0].nbMembers << endl;
+    cout << "nb member in team 1: " << hackathon.teams[0].nbMembers << endl;
 
+    std::cout << "nb t1: " << t1.nbMembers << std::endl;
+    std::cout << "coef t1: " << t1.coef <<endl;
+
+    std::cout << "nb t2: " << t2.nbMembers << std::endl;
+    std::cout << "coef t2: " << t2.coef <<endl;
+
+    std::cout << "nb t3: " << t3.nbMembers << std::endl;
+    std::cout << "coef t3: " << t3.coef <<endl;
 
 
     return 0;
