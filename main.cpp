@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "h/Hackathon.h"
+#include "h/Display.h"
 
 #include <stdio.h>
 
@@ -96,6 +97,6 @@ int main() {
 
     std::cout << "moyenne t1: " << t1.getMoyenne() << std::endl;
 
-
+    Display::tata();
     return 0;
 }
