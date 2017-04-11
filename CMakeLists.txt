@@ -14,6 +14,6 @@ set(SOURCE_FILES
     main.cpp
     Resultat.cpp
     Team.cpp
-    User.cpp)
+    User.cpp Display.cpp h/Display.h)
 
 add_executable(BeMyDev ${SOURCE_FILES})
