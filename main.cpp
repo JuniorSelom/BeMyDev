@@ -34,11 +34,10 @@ int main() {
                 cout << "L'étape n°" << hackathons[0].etapes[0].ordre << " d'une durée de " << hackathons[0].etapes[0].dureeMax << "h a bien été créée." << endl;
                 break;
             case 3:
-                std::cout << "nb teams before: " << hackathons.size() << std::endl;
                 Display::displayAddEquipe(hackathons);
-                std::cout << "nb teams after: " << hackathons.size() << std::endl;
                 break;
             case 4:
+                Display::displayEnterNote(hackathons);
                 break;
             case 0:
                 isInUse = false;

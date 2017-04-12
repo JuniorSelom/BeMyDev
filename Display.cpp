@@ -36,8 +36,8 @@ void Display::createStep(vector<Hackathon>& hackathons) {
     cout << "GOOD TOO" << endl;
 }
 
-void Display::displayAddEquipe(vector<Hackathon> h) {
-    std::string name;
+void Display::displayAddEquipe(vector<Hackathon>& h) {
+    // std::cout << "TEAMS ? " << h[0].teams[0].nom << std::endl;
     std::cout << "--- Ajouter une équipe ---" << std::endl;
     std::cout << "Liste des hackathon: " << std::endl;
     // list hackathon
@@ -49,10 +49,49 @@ void Display::displayAddEquipe(vector<Hackathon> h) {
     // select hackathon
     std::cin >> hackathonSelected;
     // enter name team
-    std::cout << "Entrez le nom de l'équipe a ajouter pour le hackathon: " << h[hackathonSelected].name << std::endl;
-    std::cin >> name;
-    // addteam in hackathon
-    h[hackathonSelected].addTeam(name);
-
-    // TO DO : call main menu
+    std::cout << "hackathonSelected " << hackathonSelected << std::endl;
+    std::cout << "h.size() " << h.size() << std::endl;
+    if (hackathonSelected > h.size()) {
+        std::cout << "Votre choix n'est pas valide merci de recommencer !" << std::endl;
+    } else {
+        std::cout << "Entrez le nom de l'équipe a ajouter pour le hackathon: " << h[hackathonSelected].name << std::endl;
+        std::string name;
+        std::cin >> name;
+        // addteam in hackathon
+        h[hackathonSelected].addTeam(name);
+        std::cout << "NB TEAMS ? " << h[0].teams.size() << std::endl;
+        std::cout << "TEAMS ? " << h[0].teams[0].nom << std::endl;
+    }
 }
+
+void Display::displayEnterNote(vector<Hackathon>& h) {
+    std::cout << "--- Ajouter des notes ---" << std::endl;
+    std::cout << "Liste des hackathon: " << std::endl;
+    // list hackathon
+    for (int i = 0; i < h.size(); ++i) {
+        std::cout << i << " : " << h[i].name << std::endl;
+    }
+    std::cout << "\tselectionnez votre hackathon: " << std::endl;
+    int hackathonSelected;
+    std::cin >> hackathonSelected;
+    std::cout << "hackathonSelected " << hackathonSelected << std::endl;
+    if (hackathonSelected > h.size()) {
+        std::cout << "Votre choix n'est pas valide merci de recommencer !" << std::endl;
+    } else {
+        // loop on teams of this hackathon
+        float note;
+        for (int j = 0; j < h[hackathonSelected].teams.size(); ++j) {
+            std::cout << "Note de l'équipe " << j << " - " << h[hackathonSelected].teams[j].nom << " : " << std::endl;
+            std::cin >> note;
+            //add note
+            h[hackathonSelected].teams[j].addNote(note);
+        }
+
+        for (int k = 0; k < h[hackathonSelected].teams.size(); ++k) {
+            std::cout << "Moyenne de l'équipe " << k << " - " << h[hackathonSelected].teams[k].getMoyenne() << std::endl;
+        }
+    }
+
+
+}
+
