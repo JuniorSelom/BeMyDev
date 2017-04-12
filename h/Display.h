@@ -12,9 +12,13 @@ class Display {
 public :
     static void tata();
 
+
     static Hackathon createHackathon();
 
     static void createStep(vector<Hackathon, allocator<Hackathon>>& hackathons);
+
+    static void displayAddEquipe(vector<Hackathon> h);
+
 };
 
 

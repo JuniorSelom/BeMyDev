@@ -14,15 +14,19 @@ Hackathon::~Hackathon() {
 
 }
 
-Hackathon::Hackathon(const string &nom_)  {
-    nom = nom_;
+Hackathon::Hackathon(const string &name_)  {
+    name = name_;
 }
 
 
-void Hackathon::addTeam(const Team t) {
-
+void Hackathon::addTeam(string name ) {
+    long size = teams.size();
+    size + 1;
+    Team t(name,size);
+    teams.push_back(t);
 }
 
-void Hackathon::addEtape(const Etape e) {
-
+void Hackathon::addEtape(int dureeMax, int ordre ) {
+    Etape e(dureeMax,ordre);
+    etapes.push_back(e);
 }
