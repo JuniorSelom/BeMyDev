@@ -28,7 +28,7 @@ void Display::createStep(vector<Hackathon>& hackathons) {
     cout << "Combien de temps dure cette étape ? (écrire la valeur en heures : 3 => 3h, 3,5 => 3h30)" << endl;
     int time;
     cin >> time;
-    Etape e(time, hackathons[idHackathon - 1].etapes.size() + 1);
+    Step e(time, hackathons[idHackathon - 1].etapes.size() + 1);
     hackathons[idHackathon - 1].etapes.push_back(e);
 
     cout << "L'étape n°" << hackathons[idHackathon - 1].etapes.size() + 1 << " d'une durée de " << time << "h a bien été créée." << endl << endl;

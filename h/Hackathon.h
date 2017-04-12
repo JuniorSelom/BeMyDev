@@ -5,7 +5,7 @@
 #ifndef UNTITLED1_HACKATHON_H
 #define UNTITLED1_HACKATHON_H
 
-#include "Etape.h"
+#include "Step.h"
 #include "Team.h"
 #include <iostream>
 #include <vector>
@@ -25,7 +25,7 @@ public:
 public:
     string name;
     vector<Team> teams;
-    vector<Etape> etapes;
+    vector<Step> etapes;
 
     void addTeam(string name );
 
