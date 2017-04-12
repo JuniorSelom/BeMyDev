@@ -15,7 +15,7 @@ Team::Team(const std::string &nom_, int uid_) {
 void Team::addMember(const User u) {
     members.push_back(u);
     nbMembers++;
-    coef = ((nbMembers - 5) * 0.05) + 1;
+    coef = ((5 - nbMembers) * 0.05) + 1;
 }
 
 float Team::addNote(float note) {

@@ -20,24 +20,30 @@ int main() {
         cout << "1\tAjouter un Hackathon" << endl;
         cout << "2\tAjouter une étape" << endl;
         cout << "3\tAjouter une équipe" << endl;
-        cout << "4\tRentrer les notes" << endl;
+        cout << "4\tAjouter un participant" << endl;
+        cout << "5\tRentrer les notes" << endl;
+        cout << "6\tAfiicher tous les membres" << endl;
         cout << endl << "0\tQuitter" << endl;
         cin >> i;
 
         switch(i){
             case 1:
                 hackathons.push_back(Display::createHackathon());
-                cout << "Vous avez créée le hackathon '" << hackathons[0].name << "'" << endl;
                 break;
             case 2:
                 Display::createStep(hackathons);
-                cout << "L'étape n°" << hackathons[0].etapes[0].ordre << " d'une durée de " << hackathons[0].etapes[0].dureeMax << "h a bien été créée." << endl;
                 break;
             case 3:
                 Display::displayAddEquipe(hackathons);
                 break;
             case 4:
+                Display::displayAddMember(hackathons);
+                break;
+            case 5:
                 Display::displayEnterNote(hackathons);
+                break;
+            case 6:
+                Display::printAllMembers(hackathons);
                 break;
             case 0:
                 isInUse = false;

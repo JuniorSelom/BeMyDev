@@ -5,7 +5,6 @@
 #include "h/User.h"
 
 
-User::User(const std::string &nom_, const std::string &prenom_) {
+User::User(const std::string &nom_) {
     nom = nom_;
-    prenom = prenom_;
 }

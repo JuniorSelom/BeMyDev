@@ -15,11 +15,15 @@ public :
 
     static Hackathon createHackathon();
 
-    static void createStep(vector<Hackathon, allocator<Hackathon>>& hackathons);
+    static void createStep(vector<Hackathon>& hackathons);
 
     static void displayAddEquipe(vector<Hackathon>& h);
 
     static void displayEnterNote(vector<Hackathon>& h);
+
+    static void displayAddMember(vector<Hackathon>& hackathons);
+
+    static void printAllMembers(vector<Hackathon> hackathons);
 
 };
 

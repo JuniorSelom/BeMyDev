@@ -12,11 +12,10 @@
 
 class User {
 public:
-    User(const std::string &nom, const std::string &prenom);
+    User(const std::string &nom);
 
 public:
     std::string nom;
-    std::string prenom;
 
     //virtual ~User();
 

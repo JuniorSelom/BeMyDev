@@ -17,6 +17,7 @@ Hackathon Display::createHackathon() {
     string name;
     cin >> name;
     Hackathon h(name);
+    cout << "Vous avez créée le hackathon '" << name << "'" << endl << endl;
     return h;
 }
 
@@ -31,9 +32,9 @@ void Display::createStep(vector<Hackathon>& hackathons) {
     int time;
     cin >> time;
     Etape e(time, hackathons[idHackathon - 1].etapes.size() + 1);
-    cout << "GOOD" << endl;
     hackathons[idHackathon - 1].etapes.push_back(e);
-    cout << "GOOD TOO" << endl;
+
+    cout << "L'étape n°" << hackathons[idHackathon - 1].etapes.size() + 1 << " d'une durée de " << time << "h a bien été créée." << endl << endl;
 }
 
 void Display::displayAddEquipe(vector<Hackathon>& h) {
@@ -77,6 +78,8 @@ void Display::displayEnterNote(vector<Hackathon>& h) {
     std::cout << "hackathonSelected " << hackathonSelected << std::endl;
     if (hackathonSelected > h.size()) {
         std::cout << "Votre choix n'est pas valide merci de recommencer !" << std::endl;
+    } else if(h[hackathonSelected].teams[0].theNotes.size() == h[hackathonSelected].etapes.size()) {
+        cout << "Les notes de toutes les étapes ont été enregistrées." << endl;
     } else {
         // loop on teams of this hackathon
         float note;
@@ -91,7 +94,45 @@ void Display::displayEnterNote(vector<Hackathon>& h) {
             std::cout << "Moyenne de l'équipe " << k << " - " << h[hackathonSelected].teams[k].getMoyenne() << std::endl;
         }
     }
-
-
 }
 
+void Display::displayAddMember(vector<Hackathon>& hackathons) {
+
+    cout << "Sélectionnez le hackathon dans lequel va évoluer ce membre" << endl;
+    int idxHackathon;
+    int idxTeam;
+    int i = 1;
+    for(auto &h : hackathons) {
+        cout << i << "\t" << h.name << endl;
+        i++;
+    }
+    cin >> idxHackathon;
+
+    cout << "Sélectionnez l'équipe dont ce membre fait parti" << endl;
+    i = 1;
+    for(auto &t : hackathons[idxHackathon - 1].teams) {
+        cout << i << "\t" << t.nom << endl;
+        i++;
+    }
+    cin >> idxTeam;
+
+    string memberName;
+    cout << "Nom du participant : ";
+    cin >> memberName;
+
+    hackathons[idxHackathon - 1].teams[idxTeam - 1].addMember(User(memberName));
+}
+
+void Display::printAllMembers(vector<Hackathon> hackathons) {
+    for(auto &h : hackathons) {
+        cout << h.name << " :" << endl;
+        for (auto &t : h.teams) {
+            cout << "\t" << t.nom << " (Moyenne : " << t.getMoyenne() << " :" << endl;
+            for (auto &m : t.members) {
+                cout << "\t\t" << m.nom << endl;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
+}
