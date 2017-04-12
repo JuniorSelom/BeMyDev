@@ -10,18 +10,45 @@ using namespace std;
 
 int main() {
 
-    int i;
-    cout << "Selectionnez une action" << endl;
-    cout << "1\tAjouter un Hackathon" << endl;
-    cout << "2\tAjouter une étape" << endl;
-    cout << "3\tAjouter une équipe" << endl;
-    cout << "4\tRentrer les notes" << endl;
-    cout << endl << endl << "0\tQuitter" << endl;
-    cin >> i;
+    vector<Hackathon> hackathons;
 
-    cout << i << endl;
+    bool isInUse = true;
+    while(isInUse) {
 
-    Hackathon hackathon;
+        int i;
+        cout << "Selectionnez une action" << endl;
+        cout << "1\tAjouter un Hackathon" << endl;
+        cout << "2\tAjouter une étape" << endl;
+        cout << "3\tAjouter une équipe" << endl;
+        cout << "4\tRentrer les notes" << endl;
+        cout << endl << "0\tQuitter" << endl;
+        cin >> i;
+
+        switch(i){
+            case 1:
+                hackathons.push_back(Display::createHackathon());
+                cout << "Vous avez créée le hackathon '" << hackathons[0].nom << "'" << endl;
+                break;
+            case 2:
+                Display::createStep(hackathons);
+                cout << "L'étape n°" << hackathons[0].etapes[0].ordre << " d'une durée de " << hackathons[0].etapes[0].dureeMax << "h a bien été créée." << endl;
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 0:
+                isInUse = false;
+                break;
+            default:
+                break;
+        }
+    }
+
+    cout << endl << "###############################" << endl;
+   // cout << i << endl;
+
+    Hackathon hackathon(".");
 
     // Création des étapes
     Etape e1(1, 3);

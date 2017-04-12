@@ -2,18 +2,18 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/h/Display.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Team.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/h/Etape.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/h/User.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/h/Resultat.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/h/Hackathon.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/h/Team.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Display.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/User.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Etape.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Hackathon.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Display.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/h/User.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/h/Hackathon.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/h/Team.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/h/Display.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/h/Resultat.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/h/Etape.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Resultat.cpp" isTestSource="false" />
     </content>

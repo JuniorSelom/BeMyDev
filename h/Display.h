@@ -6,9 +6,15 @@
 #define BEMYDEV_DISPLAY_H
 
 
+#include "Hackathon.h"
+
 class Display {
 public :
     static void tata();
+
+    static Hackathon createHackathon();
+
+    static void createStep(vector<Hackathon, allocator<Hackathon>>& hackathons);
 };
 
 
