@@ -16,9 +16,6 @@ public:
 
 public:
     std::string nom;
-
-    //virtual ~User();
-
 };
 
 

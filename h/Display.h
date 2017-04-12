@@ -10,8 +10,6 @@
 
 class Display {
 public :
-    static void tata();
-
 
     static Hackathon createHackathon();
 

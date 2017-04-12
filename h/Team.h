@@ -21,12 +21,10 @@ public:
 public:
     string nom;
     vector<User> members;
-    double coefficient;
     int nbMembers;
     float coef;
     int uid;
 
-    // int notes[];
     vector<float> theNotes;
 
     void addMember(const User u);

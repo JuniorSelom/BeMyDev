@@ -25,8 +25,3 @@ void Hackathon::addTeam(string name ) {
     Team t(name,size);
     teams.push_back(t);
 }
-
-void Hackathon::addEtape(int dureeMax, int ordre ) {
-    Etape e(dureeMax,ordre);
-    etapes.push_back(e);
-}

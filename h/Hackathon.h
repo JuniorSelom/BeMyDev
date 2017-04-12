@@ -7,7 +7,6 @@
 
 #include "Etape.h"
 #include "Team.h"
-#include "Resultat.h"
 #include <iostream>
 #include <vector>
 
@@ -27,10 +26,8 @@ public:
     string name;
     vector<Team> teams;
     vector<Etape> etapes;
-    Resultat resultat;
 
     void addTeam(string name );
-    void addEtape(int dureeMax, int ordre );
 
 };
 

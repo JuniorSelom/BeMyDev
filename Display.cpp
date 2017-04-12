@@ -8,16 +8,13 @@
 #include <string>
 using namespace std;
 
-void Display::tata() {
-    std::cout << "OTOTOT" << std::endl;
-}
 
 Hackathon Display::createHackathon() {
     cout << "Entrez le nom de ce hackathon" << endl;
     string name;
     cin >> name;
     Hackathon h(name);
-    cout << "Vous avez créée le hackathon '" << name << "'" << endl << endl;
+    cout << "Vous avez crée le hackathon '" << name << "'" << endl << endl;
     return h;
 }
 
@@ -38,20 +35,16 @@ void Display::createStep(vector<Hackathon>& hackathons) {
 }
 
 void Display::displayAddEquipe(vector<Hackathon>& h) {
-    // std::cout << "TEAMS ? " << h[0].teams[0].nom << std::endl;
-    std::cout << "--- Ajouter une équipe ---" << std::endl;
     std::cout << "Liste des hackathon: " << std::endl;
     // list hackathon
     for (int i = 0; i < h.size(); ++i) {
         std::cout << i << " : " << h[i].name << std::endl;
     }
-    std::cout << "\tselectionnez votre hackathon: " << std::endl;
+    std::cout << "Selectionnez votre hackathon: " << std::endl;
     int hackathonSelected;
     // select hackathon
     std::cin >> hackathonSelected;
     // enter name team
-    std::cout << "hackathonSelected " << hackathonSelected << std::endl;
-    std::cout << "h.size() " << h.size() << std::endl;
     if (hackathonSelected > h.size()) {
         std::cout << "Votre choix n'est pas valide merci de recommencer !" << std::endl;
     } else {
@@ -60,22 +53,18 @@ void Display::displayAddEquipe(vector<Hackathon>& h) {
         std::cin >> name;
         // addteam in hackathon
         h[hackathonSelected].addTeam(name);
-        std::cout << "NB TEAMS ? " << h[0].teams.size() << std::endl;
-        std::cout << "TEAMS ? " << h[0].teams[0].nom << std::endl;
     }
 }
 
 void Display::displayEnterNote(vector<Hackathon>& h) {
-    std::cout << "--- Ajouter des notes ---" << std::endl;
     std::cout << "Liste des hackathon: " << std::endl;
     // list hackathon
     for (int i = 0; i < h.size(); ++i) {
         std::cout << i << " : " << h[i].name << std::endl;
     }
-    std::cout << "\tselectionnez votre hackathon: " << std::endl;
+    std::cout << "Selectionnez votre hackathon: " << std::endl;
     int hackathonSelected;
     std::cin >> hackathonSelected;
-    std::cout << "hackathonSelected " << hackathonSelected << std::endl;
     if (hackathonSelected > h.size()) {
         std::cout << "Votre choix n'est pas valide merci de recommencer !" << std::endl;
     } else if(h[hackathonSelected].teams[0].theNotes.size() == h[hackathonSelected].etapes.size()) {
